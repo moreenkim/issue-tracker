@@ -5,7 +5,7 @@ import Issues from './container/Issues';
 
 import 'antd/dist/antd.css';
 import './App.css';
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 function App() {
   return (
@@ -15,14 +15,11 @@ function App() {
           <Menu.Item key="/">Issue Tracker</Menu.Item>
         </Menu>
       </Header>
-      <Content style={{ padding: '0 50px' }}>
+      <Content style={{ padding: '0 50px', background: '#fff' }}>
         <Switch>
           <Route exact path="/" component={Issues} />
         </Switch>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>
-        Issue Tracker ©2021 Created by Moreen Kim
-      </Footer>
     </Layout>
   );
 }
