@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/SearchBar renders SearchBar correctly 1`] = `undefined`;
