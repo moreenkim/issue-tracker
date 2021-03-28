@@ -3,8 +3,10 @@ import Immutable from 'seamless-immutable';
 import * as types from './actionTypes';
 
 const initialState = Immutable({
-  issues: null,
-  issue: {},
+  issues: [],
+  loading: false,
+  labels: [],
+  selectedLabels: [],
 });
 
 export default function reduce(state = initialState, action = {}) {
@@ -13,9 +15,17 @@ export default function reduce(state = initialState, action = {}) {
       return state.merge({
         issues: action.issues,
       });
-    case types.GET_ISSUE:
+    case types.GET_LABELS:
       return state.merge({
-        issue: action.issue,
+        labels: action.labels,
+      });
+    case types.SET_SELECTED_LABELS:
+      return state.merge({
+        selectedLabels: action.selectedLabels,
+      });
+    case types.SET_LOADING:
+      return state.merge({
+        loading: action.loading,
       });
     default:
       return state;
@@ -27,6 +37,14 @@ export function getIssues(state) {
   return state.issues.issues;
 }
 
-export function getIssue(state) {
-  return state.issues.issue;
+export function getLabels(state) {
+  return state.issues.labels;
+}
+
+export function getSelectedLabels(state) {
+  return state.issues.selectedLabels;
+}
+
+export function getLoading(state) {
+  return state.issues.loading;
 }
