@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/Tag renders tags correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(RepoTags)
+        issueState="OPEN"
+        path="owner/repo-name"
+      >
+        <RepoTags
+          getRepoIssues={[Function]}
+          getRepoLabels={[Function]}
+          issueState="OPEN"
+          labels={
+            Array [
+              Object {
+                "node": Object {
+                  "name": "bugs",
+                },
+              },
+            ]
+          }
+          path="owner/repo-name"
+          selectedLabels={Array []}
+          setSelectedLabels={[Function]}
+        >
+          <Col>
+            <div
+              className="ant-col"
+              style={Object {}}
+            >
+              <span
+                style={
+                  Object {
+                    "fontSize": "15px",
+                  }
+                }
+              >
+                Issue Labels:
+              </span>
+            </div>
+          </Col>
+          <Col>
+            <div
+              className="ant-col"
+              style={Object {}}
+            >
+              <CheckableTag
+                checked={false}
+                key="bugs"
+                onChange={[Function]}
+                style={
+                  Object {
+                    "fontSize": "15px",
+                  }
+                }
+              >
+                <span
+                  className="ant-tag ant-tag-checkable"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "fontSize": "15px",
+                    }
+                  }
+                >
+                  bugs
+                </span>
+              </CheckableTag>
+            </div>
+          </Col>
+        </RepoTags>
+      </Connect(RepoTags)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
